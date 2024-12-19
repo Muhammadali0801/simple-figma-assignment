@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Responsive Home Page Assignment
 
-## Getting Started
+This README file documents the work done for the class assignment where we were tasked with creating a fully responsive home page. The goal was to ensure the page layout adapts to various screen sizes, including small (`sm`), medium (`md`), large (`lg`), and extra-large (`xl`).
 
-First, run the development server:
+## Task Description
+We were required to design a responsive home page with the following features:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. **Small Screens (`sm`)**:
+   - The layout should stack vertically.
+   - The heading appears first, followed by the paragraph, button, and then the image.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. **Medium Screens (`md`) and Larger**:
+   - The layout switches to a two-column structure.
+   - The heading, paragraph, and button align on the left.
+   - The image appears on the right, properly aligned and justified.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Technologies Used
+- **Next.js**: For creating the React-based framework.
+- **Tailwind CSS**: For responsive design and utility classes.
+- **Image Component**: To handle the image with optimized loading.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Implementation Details
+The following components and styles were implemented:
 
-## Learn More
+1. **Responsive Layout**:
+   - Used `flex` and `flex-col sm:flex-row` to switch between column and row layouts based on screen size.
+   - Adjusted element orders with `order` classes (e.g., `sm:order-2`).
 
-To learn more about Next.js, take a look at the following resources:
+2. **Typography and Spacing**:
+   - Adjusted text sizes and spacing with Tailwind classes like `text-[36px]` and `gap-4`.
+   - Proper padding and margins ensured content was visually balanced on all screen sizes.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. **Image Handling**:
+   - Utilized the Next.js `Image` component for optimized image rendering.
+   - Used `object-contain` for small screens and `object-cover` for larger screens to adapt the image size.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+4. **Responsive Utilities**:
+   - `sm`, `md`, `lg`, and `xl` breakpoints were utilized for screen-specific styles.
+   - For example, `w-[250px] sm:w-auto` ensures proper scaling of images.
 
-## Deploy on Vercel
+## Outcome
+The final design meets the requirements for:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Small screens: Elements stack vertically with proper spacing and alignment.
+- Medium to extra-large screens: A two-column layout ensures a professional and balanced appearance.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Conclusion
+The assignment was successfully completed with a fully responsive layout. This home page adapts seamlessly to various screen sizes, meeting all specified requirements.
+
